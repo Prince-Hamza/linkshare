@@ -13,10 +13,10 @@ const share = async (req, res) => {
            <meta property="og:type" content="article" />
            <meta property="og:title" content=${title} />
            <meta property="og:description" content=${description} />
-           <meta property="og:image" content=${image.split('*').join('/')} />
+           <meta property="og:image" content=${image} />
         </head>
         <body>
-         ${image.split('*').join('/')}
+         ${image}
         </body>
    `))
 }
