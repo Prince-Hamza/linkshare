@@ -18,9 +18,9 @@ const share = async (req, res) => {
            <title>${title}</title>
            <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
            <meta property="og:type" content="article" />
-           <meta property="og:title" content=${title} />
-           <meta property="og:description" content=${description} />
-           <meta property="og:image" content=${imgPath} />
+           <meta property="og:title" content="${title}" />
+           <meta property="og:description" content="${description}" />
+           <meta property="og:image" content="${imgPath}" />
         </head>
         <body>
        <h1>  path : ${imgPath}</h1>
