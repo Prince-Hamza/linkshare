@@ -5,10 +5,9 @@ const share = async (req, res) => {
 
   const { title, description, imageUrl, city, date } = req.query
 
-  console.log(`title :: ${title},  desc:${description} imageUrl:${imageUrl} `)
+  console.log(`title :: ${title},  desc:${description} imageUrl:${imageUrl}, city:${city} `)
 
   if (!title || !description || !imageUrl || !city || !date) return res.status(400).send(Buffer.from(`<h2> title,description,imageUrl,city and date are required </h2`))
-
 
   return res.status(200).send(Buffer.from(
     `
