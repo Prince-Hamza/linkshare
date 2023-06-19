@@ -14,7 +14,7 @@ const share = async (req, res) => {
 
 
   let newLine = `\u240D`
-  let newLine2 = `\u2424`
+  let newLine2 = `\u000A`
   var Omega = '\u03A9';
 
 
