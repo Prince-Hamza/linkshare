@@ -14,8 +14,15 @@ const share = async (req, res) => {
     <title>  ${title}  </title>
     <meta content="${imageUrl}" itemprop="image">
     <meta content="${imageUrl}" property="og:image"> 
-    <meta content="\n ${city} \n \n ${date} \n \n ${description} \n" name="Description">
-    <meta property="og:description" content="\n ${city} \n \n ${date} \n \n ${description} \n ">
+    <meta content="\n 
+    ${city} \n \n 
+    ${date} \n \n 
+    ${description} \n"
+     name="Description">
+    <meta property="og:description" content="\n 
+    ${city} \n \n 
+    ${date} \n \n 
+    ${description} \n ">
 
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"> 
     <meta content="chrome=1" http-equiv="X-UA-Compatible"> 
@@ -25,7 +32,10 @@ const share = async (req, res) => {
     <meta content="${title}" property="og:title">  
     
     <meta content="256" property="og:image:width"> <meta content="256" property="og:image:height"> 
-    <meta content="\n ${city} \n \n ${date} \n \n ${description} \n" itemprop="description"> 
+    <meta content="\n
+     ${city} \n \n 
+     ${date} \n \n 
+     ${description} \n" itemprop="description"> 
     <meta content="${title}" property="og:site_name">
     <meta content="summary" name="twitter:card"
   `
