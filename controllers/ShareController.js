@@ -1,19 +1,19 @@
 
 const share = async (req, res) => {
 
-    res.set('Content-Type', 'text/html')
+  res.set('Content-Type', 'text/html')
 
-    const { title, description, imageUrl } = req.query
+  const { title, description, imageUrl } = req.query
 
-    console.log(`title :: ${title},  desc:${description} imageId:${imageId}, imageToken: ${imageToken} `)
+  console.log(`title :: ${title},  desc:${description} imageUrl:${imageUrl} `)
 
-    if (!title || !description || !imageUrl) return res.status(400).send(Buffer.from(`<h2> title , description and imageUrl are required </h2`))
+  if (!title || !description || !imageUrl) return res.status(400).send(Buffer.from(`<h2> title , description and imageUrl are required </h2`))
 
-    // let imagePath = `https://firebasestorage.googleapis.com/v0/b/my-first-project-ce24e.appspot.com/o/pinpoint%2Fimage%2Fimage_${imageId}?alt=media&token=${imageToken}`
+  // let imagePath = `https://firebasestorage.googleapis.com/v0/b/my-first-project-ce24e.appspot.com/o/pinpoint%2Fimage%2Fimage_${imageId}?alt=media&token=${imageToken}`
 
 
-    return res.status(200).send(Buffer.from(
-        `
+  return res.status(200).send(Buffer.from(
+    `
     <title>  ${title}  </title>
     <meta content="${description}" name="Description">
     <meta property="og:description" content="${description}">
@@ -31,24 +31,24 @@ const share = async (req, res) => {
     <meta content="${title}" property="og:site_name">
     <meta content="summary" name="twitter:card"
   `
-    ))
+  ))
 }
 
 
 const twitterShare = () => {
 
-    res.set('Content-Type', 'text/html')
+  res.set('Content-Type', 'text/html')
 
-    const { title, description, imageId, imageToken } = req.query
+  const { title, description, imageId, imageToken } = req.query
 
-    console.log(`title :: ${title},  desc:${description} imageId:${imageId}, imageToken: ${imageToken} `)
+  console.log(`title :: ${title},  desc:${description} imageId:${imageId}, imageToken: ${imageToken} `)
 
-    if (!title || !description || !imageId || !imageToken) return res.status(400).send(Buffer.from(`<h2> title , description , imageId and imageToken are required </h2`))
+  if (!title || !description || !imageId || !imageToken) return res.status(400).send(Buffer.from(`<h2> title , description , imageId and imageToken are required </h2`))
 
-    let imagePath = `https://firebasestorage.googleapis.com/v0/b/my-first-project-ce24e.appspot.com/o/pinpoint%2Fimage%2Fimage_${imageId}?alt=media&token=${imageToken}`
+  let imagePath = `https://firebasestorage.googleapis.com/v0/b/my-first-project-ce24e.appspot.com/o/pinpoint%2Fimage%2Fimage_${imageId}?alt=media&token=${imageToken}`
 
 
-    return res.status(200).send(Buffer.from(`
+  return res.status(200).send(Buffer.from(`
     <title>  ${title}  </title>
     <meta name="route-pattern" content="/">
 
@@ -144,6 +144,6 @@ const twitterShare = () => {
 }
 
 module.exports = {
-    share
+  share
 }
 
