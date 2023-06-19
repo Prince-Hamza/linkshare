@@ -12,6 +12,8 @@ const share = async (req, res) => {
   return res.status(200).send(Buffer.from(
     `
     <title>  ${title}  </title>
+    <meta content="${imageUrl}" itemprop="image">
+    <meta content="${imageUrl}" property="og:image"> 
     <meta content="\n ${city} \n \n ${date} \n \n ${description} \n" name="Description">
     <meta property="og:description" content="\n ${city} \n \n ${date} \n \n ${description} \n ">
 
@@ -21,8 +23,7 @@ const share = async (req, res) => {
     <meta content="origin" name="referrer">
     <meta content="${title}" itemprop="name"> 
     <meta content="${title}" property="og:title">  
-    <meta content="${imageUrl}" itemprop="image">
-    <meta content="${imageUrl}" property="og:image"> 
+    
     <meta content="256" property="og:image:width"> <meta content="256" property="og:image:height"> 
     <meta content="\n ${city} \n \n ${date} \n \n ${description} \n" itemprop="description"> 
     <meta content="${title}" property="og:site_name">
