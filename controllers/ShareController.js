@@ -1,4 +1,7 @@
 
+
+
+
 const share = async (req, res) => {
 
   res.set('Content-Type', 'text/html')
@@ -9,20 +12,26 @@ const share = async (req, res) => {
 
   if (!title || !description || !imageUrl || !city || !date) return res.status(400).send(Buffer.from(`<h2> title,description,imageUrl,city and date are required </h2`))
 
+
+  let newLine = `\u240D`
+  let newLine2 = `\u2424`
+  var Omega = '\u03A9';
+
+
   return res.status(200).send(Buffer.from(
     `
     <title>  ${title}  </title>
     <meta content="${imageUrl}" itemprop="image">
     <meta content="${imageUrl}" property="og:image"> 
     <meta content="\n 
-    ${city} \n \n 
+    ${city} 
     ${date} \n \n 
-    ${description} \n"
+    ${description} \n ${Omega} ${newLine} ${newLine2} ${Omega} "
      name="Description">
     <meta property="og:description" content="\n 
     ${city} \n \n 
     ${date} \n \n 
-    ${description} \n ">
+    ${description} \n ${Omega} ${newLine} ${newLine2} ${Omega} ">
 
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"> 
     <meta content="chrome=1" http-equiv="X-UA-Compatible"> 
@@ -31,11 +40,14 @@ const share = async (req, res) => {
     <meta content="${title}" itemprop="name"> 
     <meta content="${title}" property="og:title">  
     
-    <meta content="256" property="og:image:width"> <meta content="256" property="og:image:height"> 
+    <meta content="256" property="og:image:width"> 
+    <meta content="256" property="og:image:height"> 
+
+
     <meta content="\n
      ${city} \n \n 
      ${date} \n \n 
-     ${description} \n" itemprop="description"> 
+     ${description} \n  ${Omega} ${newLine} ${newLine2} ${Omega} " itemprop="description"> 
     <meta content="${title}" property="og:site_name">
     <meta content="summary" name="twitter:card"
   `
@@ -106,7 +118,7 @@ const twitterShare = () => {
   
   
   
-      <link rel="canonical" href="https://github.com/" data-turbo-transient>
+    <link rel="canonical" href="https://github.com/" data-turbo-transient>
     <meta name="turbo-body-classes" content="logged-out env-production page-responsive header-overlay home-campaign">
   
   
