@@ -55,7 +55,7 @@ const share = async (req, res) => {
 }
 
 
-const twitterShare = () => {
+const twitterShare = (req,res) => {
 
   res.set('Content-Type', 'text/html')
 
@@ -75,7 +75,7 @@ const twitterShare = () => {
   
   
   
-      <meta name="page-subject" content="${title}">
+    <meta name="page-subject" content="${title}">
   
     <meta name="github-keyboard-shortcuts" content="dashboards" data-turbo-transient="true" />
     
@@ -95,17 +95,17 @@ const twitterShare = () => {
       <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="${title}">
 
       
-        <meta name="twitter:title" content="${title}" />
-        <meta name="twitter:description" content="${description}" />
-        <meta name="twitter:image:src" content="${imageUrl}" />
-        <meta name="twitter:site" content="@github" />
-        <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="${title}" />
+      <meta name="twitter:description" content="${description}" />
+      <meta name="twitter:image:src" content="${imageUrl}" />
+      <meta name="twitter:site" content="@github" />
+      <meta name="twitter:card" content="summary_large_image" />
 
-        <meta property="og:image" content="${imageUrl}" />
-        <meta property="og:description" content="${description}" />
+     <meta property="og:image" content="${imageUrl}" />
+     <meta property="og:description" content="${description}" />
         
-        <meta name="hostname" content="github.com">  
-        <meta name="expected-hostname" content="github.com">
+    <meta name="hostname" content="github.com">  
+    <meta name="expected-hostname" content="github.com">
   
   
     <meta property="og:image:width" content="500">
