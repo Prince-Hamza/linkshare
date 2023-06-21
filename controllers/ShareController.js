@@ -12,7 +12,7 @@ const share = async (req, res) => {
 
   if (!title || !description || !imageUrl || !city || !date) return res.status(400).send(Buffer.from(`<h2> title,description,imageUrl,city and date are required </h2`))
 
-  
+
   return res.status(200).send(Buffer.from(
     `
     <title>  ${title}  </title>
@@ -48,7 +48,10 @@ const share = async (req, res) => {
 
   
     <script>
-           window.location.replace('https://www.google.com')
+    window.onload = function(event) {
+      window.location.replace('https://linkshare-production.up.railway.app')
+    }
+           
     </script>
    
   `
