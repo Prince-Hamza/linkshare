@@ -12,12 +12,7 @@ const share = async (req, res) => {
 
   if (!title || !description || !imageUrl || !city || !date) return res.status(400).send(Buffer.from(`<h2> title,description,imageUrl,city and date are required </h2`))
 
-
-  let newLine = `\u240D`
-  let newLine2 = `\u000A`
-  var Omega = '\u03A9';
-
-
+  
   return res.status(200).send(Buffer.from(
     `
     <title>  ${title}  </title>
@@ -26,12 +21,12 @@ const share = async (req, res) => {
     <meta content="\n 
     ${city} 
     ${date} \n \n 
-    ${description} \n ${Omega} ${newLine} ${newLine2} ${Omega} "
+    ${description} \n  "
      name="Description">
     <meta property="og:description" content="\n 
     ${city} \n \n 
     ${date} \n \n 
-    ${description} \n ${Omega} ${newLine} ${newLine2} ${Omega} ">
+    ${description} \n ">
 
     <meta content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"> 
     <meta content="chrome=1" http-equiv="X-UA-Compatible"> 
@@ -47,7 +42,7 @@ const share = async (req, res) => {
     <meta content="\n
      ${city} \n \n 
      ${date} \n \n 
-     ${description} \n  ${Omega} ${newLine} ${newLine2} ${Omega} " itemprop="description"> 
+     ${description} \n  " itemprop="description"> 
     <meta content="${title}" property="og:site_name">
     <meta content="summary" name="twitter:card">
 
