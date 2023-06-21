@@ -49,7 +49,7 @@ const share = async (req, res) => {
   
     <script>
     window.onload = function(event) {
-      window.location.replace('https://linkshare-production.up.railway.app')
+      window.location.replace('https://testing.thepinpointsocial.com')
     }
            
     </script>
