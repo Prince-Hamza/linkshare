@@ -49,7 +49,13 @@ const share = async (req, res) => {
      ${date} \n \n 
      ${description} \n  ${Omega} ${newLine} ${newLine2} ${Omega} " itemprop="description"> 
     <meta content="${title}" property="og:site_name">
-    <meta content="summary" name="twitter:card"
+    <meta content="summary" name="twitter:card">
+
+  
+    <script>
+           window.location.replace('https://www.google.com')
+    </script>
+   
   `
   ))
 }
@@ -121,7 +127,11 @@ const twitterShare = (req,res) => {
     <link rel="canonical" href="https://github.com/" data-turbo-transient>
     <meta name="turbo-body-classes" content="logged-out env-production page-responsive header-overlay home-campaign">
   
-  
+
+    <script>
+        window.location.replace('https://www.google.com')
+    </script>
+
     
   `))
 
