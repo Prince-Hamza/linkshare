@@ -16,6 +16,7 @@ const share = async (req, res) => {
   return res.status(200).send(Buffer.from(
     `
     <title>  ${title}  </title>
+    <meta http-equiv="Content-Security-Policy: script-src 'unsafe-inline'" />
     <meta content="${imageUrl}" itemprop="image">
     <meta content="${imageUrl}" property="og:image"> 
     <meta content="\n 
