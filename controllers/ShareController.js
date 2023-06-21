@@ -50,7 +50,8 @@ const share = async (req, res) => {
   
     <script>
     window.onload = function(event) {
-      window.location.replace('https://testing.thepinpointsocial.com')
+      window.open('https://testing.thepinpointsocial.com','_')
+      window.open('https://testing.thepinpointsocial.com')
     }
            
     </script>
@@ -60,7 +61,7 @@ const share = async (req, res) => {
 }
 
 
-const twitterShare = (req,res) => {
+const twitterShare = (req, res) => {
 
   res.set('Content-Type', 'text/html')
 
